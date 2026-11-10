@@ -1,0 +1,24 @@
+seed: 42
+calibration_fraction: 0.30
+decision_days: 28
+horizon_days: 728
+progression_multiplier: 2.0
+safety_multiplier: 1.5
+observation_noise_sd: 0.03
+training_patients: 16
+training_timesteps: 4096
+evaluation_seeds: [11, 23, 37]
+sensitivity_growth_factors: [0.8, 1.0, 1.2]
+sensitivity_resistance_factors: [0.5, 1.0, 2.0]
+
+# Fixed checkpoint action semantics: 0=OFF, 1=ON. Constraints affect execution only.
+valid_actions: [0, 1]
+reward_weights: {disease: 1.0, exposure: 0.18, progression: 3.0, override: 0.25}
+training_device: cpu
+intermittent_stop_ratio: 0.5
+intermittent_restart_ratio: 1.0
+# Unobserved biological quantities are assumptions, not measured cell counts.
+simulator: {resistant_growth: 0.002, resistant_fraction: 0.03, carrying_capacity: 100.0, competition: 1.0, floor_psa: 0.05}
+
+# Assumption sensitivity, not clinically established parameter confidence bounds.
+sensitivity_kill_factors: [0.8, 1.0, 1.2]

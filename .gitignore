@@ -1,0 +1,52 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+data/processed/
+models/*.zip
+models/*.json
+results/*.csv
+results/*.json
+
+frontend/node_modules/
+frontend/dist/
+frontend/test-results*/
+frontend/playwright-report/
+*.tsbuildinfo
+*.tmp
+results/studio/
+
+# Python environments
+.venv/
+.venv_*/
+venv/
+env/
+
+# Python cache
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Node dependencies
+node_modules/
+frontend/node_modules/
+
+# Generated frontend build
+frontend/dist/
+
+# macOS
+.DS_Store
+
+# Temporary files
+*.tmp
+*.log
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# Research data, model checkpoints and generated outputs
+data/
+models/
+results/
